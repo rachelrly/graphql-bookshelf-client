@@ -1,5 +1,5 @@
 export function useGetColor(genre) {
-  console.log(genre)
+  log(genre)
   switch (genre) {
     case 'Fiction':
       return { light: '#69f06b', dark: '#007d2b' };

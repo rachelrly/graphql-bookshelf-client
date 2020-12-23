@@ -25,7 +25,7 @@ function Library() {
   }
 `
   const { data, loading } = useQuery(books)
-  console.log(data)
+
 
 
   return (
