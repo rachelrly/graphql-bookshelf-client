@@ -53,7 +53,7 @@ function Book(props) {
             <p>Published {data.book.published}</p>
             <p>Rating {data.book.rating}/5</p>
           </div>
-          <AuthorBook author={data.book.author} />
+          {data.book.author.books.length > 1 ? <AuthorBook author={data.book.author} /> : null}
         </div>
         : null}
     </Fragment>

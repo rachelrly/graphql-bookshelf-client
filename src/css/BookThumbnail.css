@@ -52,7 +52,7 @@ outline: 2px solid #090909;
 
 
 .book-info-wrapper p {
-    padding: var(--spacer-sm) 0;
+    padding: var(--spacer-sm);
 }
 
 .author-books-wrapper{
@@ -97,6 +97,7 @@ align-self: center;
 
 .book-info-wrapper{
     margin-top: var(--spacer-sm);
+    align-self: flex-start;
 }
 
 .author-books-wrapper{
