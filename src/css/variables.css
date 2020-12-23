@@ -1,6 +1,8 @@
 :root{
-  --colors-accent: #01579B;
-  --colors-muted: #616161;
+  --colors-one: #69f06b;
+--colors-one-dark: #007d2b;
+  --colors-two: #69eef0;
+  --colors-two-dark:#007570;
   --colors-black: #000;
   --colors-white: #FFF;
 

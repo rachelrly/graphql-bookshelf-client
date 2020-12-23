@@ -1,0 +1,64 @@
+.wrapper{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-wrapper{
+    justify-content: space-between;
+
+    flex-direction: column;
+    height: 100vh;
+}
+
+.book-thumb-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 200px;
+    padding: var(--spacer-sm);
+    justify-content: space-between;
+    margin: var(--spacer-sm);
+    cursor: pointer;
+}
+
+.book-thumb-wrapper:nth-child(even){
+    background-color: var(--colors-one);
+    color: var(--colors-one-dark);
+}
+
+.book-thumb-wrapper:nth-child(odd){
+    background-color: var(--colors-two);
+    color: var(--colors-two-dark);
+
+}
+
+.book-thumb-title{
+    flex: 2;
+}
+
+.also-by-wrapper{
+    display: flex;
+    width: inherit;
+}
+
+.book-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: var(--spacer-lg);
+    justify-content: center;
+    align-items: center;
+}
+.book-info-wrapper p {
+    padding: var(--spacer-tiny)
+}
+
+.author-books-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
