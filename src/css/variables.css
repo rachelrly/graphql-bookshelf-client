@@ -1,0 +1,44 @@
+:root{
+  --colors-accent: #01579B;
+  --colors-muted: #616161;
+  --colors-black: #000;
+  --colors-white: #FFF;
+
+  --spacer-tiny: 0.1rem;
+  --spacer-sm: 0.8rem;
+  --spacer-med: 1rem;
+  --spacer-lg: 1.2rem;
+
+  --button-width: 120px;
+  --button-height: 50px;
+
+  --border-width: 2px;
+
+  --font-size-caption: 12px;
+  --font-size-regular: 14px;
+  
+  --font: "Verdana", sans-serif;
+}
+
+@media all and (min-width: 500px){
+ :root{
+  --spacer-sm: 1rem;
+  --spacer-med: 1.2rem;
+  --spacer-lg: 1.4rem;
+
+  --font-size-regular: 16px;
+ } 
+
+}
+
+@media all and (min-width: 800px){
+  :root{
+   --spacer-sm: 1.2rem;
+   --spacer-med: 1.6rem;
+   --spacer-lg: 2rem;
+
+   --font-size-caption: 14px;
+   --font-size-regular: 18px;
+  } 
+
+}

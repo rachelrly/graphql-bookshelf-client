@@ -1,0 +1,125 @@
+/*RACHELS BASE CSS STYLES*/
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img{
+  width: 100%;
+}
+
+main{
+  width: 100%;
+  min-height: calc(100vh- 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--font);
+}
+
+header{
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colors-accent);
+  color: var(--colors-white);
+  padding: var(--spacer-sm);
+}
+
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: inherit;
+  height: 50px;
+  background-color: var(--colors-accent);
+  color: var(--colors-white);
+  padding: var(--spacer-sm);
+}
+
+footer .icon{
+  color: var(--colors-white);
+  font-size: 30px;
+}
+
+p{
+  padding: var(--spacer-sm) 0;
+  font-size: var(--font-size-regular);
+}
+
+button, .button{
+  cursor: pointer;
+  outline: 0;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--colors-accent);
+  color: var(--colors-white);
+  border: var(--border-width) solid var(--colors-accent);
+  margin: var(--spacer-sm) 0;
+  padding: 0;
+  border-radius: 15px;
+}
+
+button:focus, .button:focus{
+  background-color: var(--colors-white);
+  color: var(--colors-accent);
+  border: var(--border-width) solid var(--colors-accent);
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  padding: var(--spacer-lg);
+  justify-content: flex-start;
+  height: 100%;
+  color: var(--colors-black);
+}
+
+
+
+
+/*STYLES FOR FORM ELEMENTS*/
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input, textarea{
+  width: 100%;
+  padding: 3px;
+  font-size: var(--font-size-sm);
+  outline: 0;
+}
+
+input:focus, textarea:focus{
+  border: var(--border-width) solid var(--colors-accent);
+}
+/*END FORM STYLES*/
+
+
+
+
+@media all and (min-width: 500px){
+header{
+   flex-direction: row;
+   justify-content: space-between;
+}
+}
+
+@media all and (min-width: 800px){
+
+}
