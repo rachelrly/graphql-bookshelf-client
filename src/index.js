@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ApolloClient, useQuery, ApolloProvider, InMemoryCache, gql } from '@apollo/client';
-
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { BookContextProvider } from './contexts/bookContext';
 
 const client = new ApolloClient({
   uri: 'https://sheltered-harbor-20336.herokuapp.com/graphql',
@@ -11,7 +11,9 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <BookContextProvider>
+      <App />
+    </BookContextProvider>
   </ApolloProvider>,
   document.getElementById('root')
 );

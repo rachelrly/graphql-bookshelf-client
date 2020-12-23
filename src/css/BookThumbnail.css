@@ -1,19 +1,10 @@
 .wrapper{
-    width: inherit;
-    height: inherit;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
-
-.book-wrapper{
-    justify-content: space-between;
-
-    flex-direction: column;
-    height: 100vh;
-}
-
 .book-thumb-wrapper{
     display: flex;
     flex-direction: column;
@@ -23,17 +14,25 @@
     justify-content: space-between;
     margin: var(--spacer-sm);
     cursor: pointer;
+    outline: 0;
 }
 
 .book-thumb-wrapper:nth-child(even){
     background-color: var(--colors-one);
+}
+
+.book-thumb-wrapper:nth-child(even):focus{
+    outline: 2px solid var(--colors-one-dark);
     color: var(--colors-one-dark);
 }
 
 .book-thumb-wrapper:nth-child(odd){
     background-color: var(--colors-two);
-    color: var(--colors-two-dark);
+}
 
+.book-thumb-wrapper:nth-child(odd):focus{
+    outline: 2px solid var(--colors-two-dark);
+    color: var(--colors-two-dark);
 }
 
 .book-thumb-title{
@@ -43,22 +42,72 @@
 .also-by-wrapper{
     display: flex;
     width: inherit;
+    flex-wrap: wrap;
 }
 
 .book-info-wrapper{
     display: flex;
     flex-direction: column;
-    flex: 1;
-    margin-top: var(--spacer-lg);
+    height: 400px !important;
+    padding: var(--spacer-sm);
+    border-radius:  1px 8px 8px 1px;
+    width: 300px; 
     justify-content: center;
     align-items: center;
+    background-color: var(--colors-two-dark);
 }
+
 .book-info-wrapper p {
     padding: var(--spacer-tiny)
 }
 
 .author-books-wrapper{
-    height: 100%;
+    margin-top: var(--spacer-lg);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--spacer-sm);
+    
+}
+
+.also-by-wrapper{
+   justify-content: center;
+   align-items: center;
+   
+}
+.back-button-wrapper{
+    width: inherit;
+    height: 80px;
+    padding: var(--spacer-sm) var(--spacer-sm) var(--spacer-sm) 0;
+    align-self: flex-start;
+}
+
+.back-button{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: var(--colors-one);
+    cursor: pointer;
+    outline: 0;
+}
+
+.back-button:focus{
+    border: 2px solid var(--colors-one-dark);
+    fill: var(--colors-one-dark);
+}
+
+.book-wrapper{
+    height: 100%;
+    flex: 4;
+    justify-content: flex-start;
+}
+
+@media all and (min-width: 900px){
+    .author-books-wrapper{
+        margin-top: var(--spacer-lg);
+    }
+.book-wrapper{
+    flex-direction: row;
+}
 }

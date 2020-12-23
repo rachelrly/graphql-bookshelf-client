@@ -1,21 +1,19 @@
-import React, {Fragment, useState} from 'react'
+import React, { Fragment, useState, useContext } from 'react'
 import { useQuery, gql } from '@apollo/client';
 import BookThumbnail from './BookThumbnail';
 import Book from './Book';
+import "../css/Library.css";
 import '../css/BookThumbnail.css';
+import { BookContext } from '../contexts/bookContext';
 
 function Library() {
-
-  const [showBook, setShowBook] = useState(null)
+  const { page, setPage } = useContext(BookContext);
 
   const books = gql`
   query GetBooks {
     books{
       id,
       title,
-      rating,
-      genre,
-      published,
       author{
         firstName, 
         lastName,
@@ -25,15 +23,15 @@ function Library() {
   }
 `
 
-const {data} = useQuery(books)
+  const { data } = useQuery(books)
 
   return (
-<Fragment>
-    {!showBook
-    ? <div className='library-wrapper wrapper'>
-    {data ? data.books.map(d => <BookThumbnail setShowBook={() => setShowBook(d.id)} key={d.id} {...d} />) : null}
-    </div>
-    : <Book id={showBook}/>}
+    <Fragment>
+      {page === 'list'
+        ? <div className='library-wrapper wrapper'>
+          {data ? data.books.map(d => <BookThumbnail key={d.id} {...d} />) : null}
+        </div>
+        : <Book id={page} />}
     </Fragment>
   )
 }
