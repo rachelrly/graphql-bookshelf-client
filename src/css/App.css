@@ -30,7 +30,7 @@ footer{
   height: 50px;
   background-color: var(--colors-accent);
   color: var(--colors-white);
-  padding: var(--spacer-sm);
+  padding: var(--spacer-sm) var(--spacer-sm) 0 var(--spacer-sm);
 }
 
 footer .icon{

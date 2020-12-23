@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useContext } from 'react'
+import React, { Fragment, useEffect, useContext } from 'react'
 import { useQuery, gql } from '@apollo/client';
 import BookThumbnail from './BookThumbnail';
 import Book from './Book';
@@ -14,6 +14,8 @@ function Library() {
     books{
       id,
       title,
+      genre,
+      rating,
       author{
         firstName, 
         lastName,
@@ -22,8 +24,9 @@ function Library() {
     }
   }
 `
+  const { data, loading } = useQuery(books)
+  console.log(data)
 
-  const { data } = useQuery(books)
 
   return (
     <Fragment>

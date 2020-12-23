@@ -21,6 +21,7 @@ function Book(props) {
           books{
               id,
               title,
+              genre,
               author{
                   firstName,
                   lastName
@@ -33,7 +34,8 @@ function Book(props) {
   `
 
   const { data } = useQuery(b)
-
+  //if author books.length > 3
+  //
   return (
     <Fragment>
       <div className='back-button-wrapper'>
@@ -45,7 +47,7 @@ function Book(props) {
       </div>
       {data
         ? <div className='book-wrapper wrapper'>
-          <div className='book-info-wrapper'>
+          <div className={`book-info-wrapper ${data.book.genre}`}>
             <h2>{data.book.title}</h2>
             <p>By {data.book.author.firstName} {data.book.author.lastName}</p>
             <p>Published {data.book.published}</p>

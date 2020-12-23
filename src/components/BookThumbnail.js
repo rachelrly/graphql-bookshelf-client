@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import '../css/BookThumbnail.css';
 
 import { BookContext } from '../contexts/bookContext';
+import { useGetColor } from '../hooks/useGetColor';
 
 function BookThumbnail(props) {
     const { setPage } = useContext(BookContext);
-    console.log(props.id)
 
     return (
-        <div className='book-thumb-wrapper'
+        <div className={`book-thumb-wrapper ${props.genre}`}
             onClick={() => setPage(props.id)}
             onKeyPress={e => e.key === 'Enter' ? setPage(props.id) : null}
             tabIndex='0'>
