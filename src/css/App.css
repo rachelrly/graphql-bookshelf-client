@@ -18,6 +18,7 @@ img{
   flex-direction: column;
   align-items: center;
   padding: var(--spacer-sm);
+  line-height: calc(var(--font-size-caption) * 1.4);
   font-family: var(--font);
 }
 
@@ -37,6 +38,16 @@ footer .icon{
   color: var(--colors-white);
   font-size: 30px;
 }
+
+footer .icon:hover,
+footer .icon:focus{
+fill: #008700;
+}
+
+footer a{
+  outline: 0;
+}
+
 
 p{
   font-size: var(--font-size-regular);
@@ -97,16 +108,4 @@ input, textarea{
 
 input:focus, textarea:focus{
   border: var(--border-width) solid var(--colors-accent);
-}
-/*END FORM STYLES*/
-
-
-
-
-@media all and (min-width: 500px){
-
-}
-
-@media all and (min-width: 800px){
-
 }

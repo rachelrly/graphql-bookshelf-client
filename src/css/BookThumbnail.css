@@ -9,6 +9,7 @@
     margin: var(--spacer-sm);
     cursor: pointer;
     outline: 0;
+    border-radius:  1px 8px 8px 1px;
 }
 
 .wrapper{
@@ -26,7 +27,8 @@
 
 .book-thumb-wrapper:hover,
 .book-thumb-wrapper:focus{
-outline: 2px solid #090909;
+border: 2px solid #090909;
+border-radius:  1px 8px 8px 1px;
 }
 
 .book-thumb-title{
@@ -145,7 +147,7 @@ align-self: center;
 .Fiction:focus,
 .Fiction:hover{
     color: #007d2b;
-    outline: 2px solid #007d2b;
+    border: 2px solid #007d2b;
 }
 
 .Poetry{
@@ -156,7 +158,7 @@ align-self: center;
 .Poetry:focus,
 .Poetry:hover{ 
     color: #007570;
-    outline: 2px solid #007570;
+    border: 2px solid #007570;
 }
 
 .Stories{
@@ -166,13 +168,13 @@ align-self: center;
 .Stories:focus,
 .Stories:hover{ 
     color: #008700;
-    outline: 2px solid #008700;
+    border: 2px solid #008700;
 }
 
 .Writing:focus,
 .Writing:hover{ 
     color:#a500cc;
-    outline: 2px solid #a500cc;
+    border: 2px solid #a500cc;
 }
 
 .Writing{
@@ -186,7 +188,7 @@ align-self: center;
 .Philosophy:focus,
 .Philosophy:hover{ 
     color:#007570;
-    outline: 2px solid #007570;
+    border: 2px solid #007570;
 }
 
 .Classics{
@@ -196,11 +198,11 @@ align-self: center;
 .Classics:focus,
 .Classics:hover{ 
     color:#3508ae;
-    outline: 2px solid #3508ae;
+    border: 2px solid #3508ae;
 }
 
 .book-info-wrapper:hover{
-    outline: 0;
+    border: 0;
     color: inherit;
 }
 

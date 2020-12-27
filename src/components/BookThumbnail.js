@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import '../css/BookThumbnail.css';
 
 import { BookContext } from '../contexts/bookContext';
-import { useGetColor } from '../hooks/useGetColor';
 
 function BookThumbnail(props) {
     const { setPage } = useContext(BookContext);

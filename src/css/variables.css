@@ -1,25 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
 :root{
   --colors-one: #69f06b;
---colors-one-dark: #007d2b;
+  --colors-one-dark: #007d2b;
   --colors-two: #69eef0;
   --colors-two-dark:#007570;
   --colors-black: #000;
   --colors-white: #FFF;
 
   --spacer-tiny: 0.1rem;
-  --spacer-sm: 0.8rem;
-  --spacer-med: 1rem;
-  --spacer-lg: 1.2rem;
+  --spacer-sm: 1rem;
+  --spacer-med: 1.4rem;
+  --spacer-lg: 1.8rem;
 
   --button-width: 120px;
   --button-height: 50px;
 
   --border-width: 2px;
 
-  --font-size-caption: 12px;
-  --font-size-regular: 14px;
+  --font-size-caption: 1rem;
+  --font-size-regular: 1rem;
   
-  --font: "Verdana", sans-serif;
+  --font: "Crimson Text", serif;
 }
 
 @media all and (min-width: 500px){
@@ -28,7 +30,6 @@
   --spacer-med: 1.2rem;
   --spacer-lg: 1.4rem;
 
-  --font-size-regular: 16px;
  } 
 
 }
@@ -38,9 +39,6 @@
    --spacer-sm: 1.2rem;
    --spacer-med: 1.6rem;
    --spacer-lg: 2rem;
-
-   --font-size-caption: 14px;
-   --font-size-regular: 18px;
   } 
 
 }
