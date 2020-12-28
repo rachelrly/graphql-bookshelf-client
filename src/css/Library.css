@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   height: 100%;
   
 }
@@ -15,17 +14,15 @@
 }
 
 .back-button{
-  border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-color: white;
   cursor: pointer;
   outline: 0;
 }
 
-.back-button:focus{
-  border: 2px solid var(--colors-one-dark);
-  fill: var(--colors-one-dark);
+.back-button:focus,
+.back-button:hover{
+  fill: var(--colors-accent-dark);
 }
 
 

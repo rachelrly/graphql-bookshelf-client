@@ -29,13 +29,11 @@ li:focus{
   z-index: 3;
 }
 
-
-
 nav{
-  width: calc(var(--button-width) + var(--spacer-lg));
   align-self: flex-end;
-  padding-right: var(--spacer-lg);
 }
+
+
 
 .sub-nav-wrapper{
   right: calc(var(--button-width) + var(--spacer-tiny));
@@ -63,4 +61,12 @@ nav{
 .nav-arrow{
   transform: rotate(0deg);
   padding-left: var(--spacer-tiny);
+}
+
+@media all and (min-width: 500px){
+  nav{
+    width: calc(var(--button-width) + var(--spacer-lg));
+    
+    padding-right: var(--spacer-lg);
+  }
 }

@@ -129,6 +129,7 @@ align-self: center;
     .book-wrapper{
         justify-content: space-between;
         width: inherit;
+        justify-content: flex-start;
     }
 }
 
