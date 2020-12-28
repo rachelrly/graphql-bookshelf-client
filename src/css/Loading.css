@@ -1,0 +1,34 @@
+@keyframes circle {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+
+.loading-wrapper svg text{
+  font-family: var(--font);
+  font-size: calc(var(--font-size-caption) * 2.1);
+  fill: var(--colors-white);
+
+  
+}
+
+ .loading-wrapper svg{
+  position: relative;
+  animation-name: circle;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.loading-wrapper{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}

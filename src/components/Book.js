@@ -4,6 +4,7 @@ import AuthorBook from './AuthorBooks';
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import { BookContext } from '../contexts/bookContext';
 import BookContent from './BookContent';
+import Loading from './Loading';
 
 function Book(props) {
   const { setPage } = useContext(BookContext);
@@ -34,7 +35,7 @@ function Book(props) {
     }
   `
 
-  const { data } = useQuery(b)
+  const { data, loading } = useQuery(b)
   //if author books.length > 3
   //
   return (
@@ -46,9 +47,11 @@ function Book(props) {
           className='back-button'
           tabIndex='0' />
       </div>
-      {data
-        ? <BookContent {...data} />
-        : null}
+      {loading
+        ? <Loading />
+        : data
+          ? <BookContent {...data} />
+          : null}
     </Fragment>
 
   )

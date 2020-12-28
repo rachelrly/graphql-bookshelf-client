@@ -6,6 +6,7 @@ import "../css/Library.css";
 import '../css/BookThumbnail.css';
 import { BookContext } from '../contexts/bookContext';
 import Dropdown from './Dropdown';
+import Loading from './Loading';
 
 function Library() {
   const { page, setPage } = useContext(BookContext);
@@ -31,15 +32,17 @@ function Library() {
 
   return (
     <main>
+      {loading
+        ? <Loading />
+        : page === 'list'
+          ? <Fragment>
+            <Dropdown />
+            <div className='library-wrapper wrapper'>
+              {data ? data.books.map(d => <BookThumbnail key={d.id} {...d} />) : null}
+            </div>
+          </Fragment>
+          : <Book id={page} />}
 
-      {page === 'list'
-        ? <Fragment>
-          <Dropdown />
-          <div className='library-wrapper wrapper'>
-            {data ? data.books.map(d => <BookThumbnail key={d.id} {...d} />) : null}
-          </div>
-        </Fragment>
-        : <Book id={page} />}
     </main>
   )
 }
