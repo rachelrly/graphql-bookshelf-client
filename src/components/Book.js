@@ -3,6 +3,7 @@ import { useQuery, gql } from '@apollo/client';
 import AuthorBook from './AuthorBooks';
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import { BookContext } from '../contexts/bookContext';
+import BookContent from './BookContent';
 
 function Book(props) {
   const { setPage } = useContext(BookContext);
@@ -46,15 +47,7 @@ function Book(props) {
           tabIndex='0' />
       </div>
       {data
-        ? <div className='book-wrapper wrapper'>
-          <div className={`book-info-wrapper ${data.book.genre}`}>
-            <h2>{data.book.title}</h2>
-            <p>By {data.book.author.firstName} {data.book.author.lastName}</p>
-            <p>Published {data.book.published}</p>
-            <p>Rating {data.book.rating}/5</p>
-          </div>
-          {data.book.author.books.length > 1 ? <AuthorBook author={data.book.author} /> : null}
-        </div>
+        ? <BookContent {...data} />
         : null}
     </Fragment>
 

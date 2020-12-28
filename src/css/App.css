@@ -16,22 +16,36 @@ img{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: var(--spacer-sm);
   line-height: calc(var(--font-size-caption) * 1.4);
   font-family: var(--font);
+}
+
+main{
+  padding: var(--spacer-sm);
+  display: flex;
+  width: 100%;
+  height: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  
 }
 
 
 footer{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 50px;
-  background-color: var(--colors-accent);
+  height: calc(1.8 * var(--spacer-lg));
+  padding: 0 var(--spacer-lg);
+  align-self: flex-end;
+  background-color: var(--colors-accent-dark);
   color: var(--colors-white);
-  padding: var(--spacer-sm) var(--spacer-sm) 0 var(--spacer-sm);
+ 
 }
 
 footer .icon{
@@ -41,7 +55,7 @@ footer .icon{
 
 footer .icon:hover,
 footer .icon:focus{
-fill: #008700;
+fill: var(--colors-accent);
 }
 
 footer a{
@@ -58,17 +72,19 @@ button, .button{
   outline: 0;
   width: var(--button-width);
   height: var(--button-height);
-  color:var(--colors-accent-dark);
-  background-color: var(--colors-accent);
+  color:var(--colors-accent);
+  background-color: var(--colors-accent-dark);
   border: var(--border-width) solid var(--colors-accent-dark);
   margin-bottom: var(--spacer-tiny);
   border-radius: 2px;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 button:focus, .button:focus{
-  background-color: var(--colors-accent-dark);
+  background-color: var(--colors-accent);
   border: var(--border-width) solid var(--colors-accent);
-  color:var(--colors-accent);
+  color:var(--colors-accent-dark);
 }
 
 section{

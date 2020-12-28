@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
+import { useAuthorDataAsList } from '../hooks/hooks';
 
 function SubNav(props) {
 
   useEffect(() => {
-    return () => props.setSubNav([])
+    return () => props.setSubNav(null)
   }, [])
 
   const arr = props.subNav === 'author' ? props.author : props.subNav === 'genre' ? props.genre : props.rating
@@ -15,7 +16,7 @@ function SubNav(props) {
         key={index}
         tabIndex='0'
         onClick={() => { }}
-        onKeyPress={e => e.key === 'Enter' ? () => { } : null}>{a}</li>))}
+        onKeyPress={e => e.key === 'Enter' ? () => { } : null}><span>{a}</span></li>))}
     </ul>
   )
 }

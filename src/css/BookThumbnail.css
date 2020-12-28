@@ -53,8 +53,8 @@ border-radius:  1px 8px 8px 1px;
 }
 
 
-.book-info-wrapper p {
-    padding: var(--spacer-sm);
+.book-info-wrapper>* {
+    padding: var(--spacer-sm) 0;
 }
 
 .author-books-wrapper{
@@ -82,7 +82,7 @@ align-self: center;
 
 .book-wrapper{
     height: 100%;
-    flex: 4;
+    flex: 3;
     flex-direction: column;
     justify-content: center;
     

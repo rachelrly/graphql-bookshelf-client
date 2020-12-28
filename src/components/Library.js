@@ -30,14 +30,14 @@ function Library() {
 
 
   return (
-    <Fragment>
+    <main>
       <Dropdown />
       {page === 'list'
         ? <div className='library-wrapper wrapper'>
           {data ? data.books.map(d => <BookThumbnail key={d.id} {...d} />) : null}
         </div>
         : <Book id={page} />}
-    </Fragment>
+    </main>
   )
 }
 
