@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
 :root{
-  --colors-one: #69f06b;
-  --colors-one-dark: #007d2b;
-  --colors-two: #69eef0;
-  --colors-two-dark:#007570;
+  --colors-accent: #86bff4;
+  --colors-accent-dark: #3915a5;
   --colors-black: #000;
   --colors-white: #FFF;
 
@@ -13,8 +11,8 @@
   --spacer-med: 1.4rem;
   --spacer-lg: 1.8rem;
 
-  --button-width: 120px;
-  --button-height: 50px;
+  --button-width: 8rem;
+  --button-height: 2rem;
 
   --border-width: 2px;
 

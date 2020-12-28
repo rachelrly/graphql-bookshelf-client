@@ -58,18 +58,17 @@ button, .button{
   outline: 0;
   width: var(--button-width);
   height: var(--button-height);
+  color:var(--colors-accent-dark);
   background-color: var(--colors-accent);
-  color: var(--colors-white);
-  border: var(--border-width) solid var(--colors-accent);
-  margin: var(--spacer-sm) 0;
-  padding: 0;
-  border-radius: 15px;
+  border: var(--border-width) solid var(--colors-accent-dark);
+  margin-bottom: var(--spacer-tiny);
+  border-radius: 2px;
 }
 
 button:focus, .button:focus{
-  background-color: var(--colors-white);
-  color: var(--colors-accent);
+  background-color: var(--colors-accent-dark);
   border: var(--border-width) solid var(--colors-accent);
+  color:var(--colors-accent);
 }
 
 section{

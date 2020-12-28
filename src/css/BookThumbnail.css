@@ -140,14 +140,14 @@ align-self: center;
 /*COLOR CLASSES BASED ON GENRE*/
 
 .Fiction{
-    background-color: #69f06b;
+    background-color: #f286f4;
    
 }
 
 .Fiction:focus,
 .Fiction:hover{
-    color: #007d2b;
-    border: 2px solid #007d2b;
+    color: #6a00b5;
+    border: 2px solid #6a00b5;
 }
 
 .Poetry{
@@ -162,33 +162,33 @@ align-self: center;
 }
 
 .Stories{
-    background-color: #aaf069;
+    background-color: #f599c5;
 }
 
 .Stories:focus,
 .Stories:hover{ 
-    color: #008700;
-    border: 2px solid #008700;
+    color: #8e2868;
+    border: 2px solid #8e2868;
 }
 
 .Writing:focus,
 .Writing:hover{ 
-    color:#a500cc;
-    border: 2px solid #a500cc;
+    color:#5200af;
+    border: 2px solid #5200af;
 }
 
 .Writing{
-    background-color: #f599f3;
+    background-color: #c999f5
 }
 
 .Philosophy{
-    background-color: #69eef0;
+    background-color: #f48688;
 }
 
 .Philosophy:focus,
 .Philosophy:hover{ 
-    color:#007570;
-    border: 2px solid #007570;
+    color:#ae0000;
+    border: 2px solid #ae0000;
 }
 
 .Classics{
@@ -197,8 +197,19 @@ align-self: center;
 
 .Classics:focus,
 .Classics:hover{ 
-    color:#3508ae;
-    border: 2px solid #3508ae;
+    color:#3915a5;
+    border: 2px solid #3915a5;
+}
+
+.Non-fiction{
+    background-color: #86bff4;
+   
+}
+
+.Non-fiction:focus,
+.Non-fiction:hover{
+    color: #093592;
+    border: 2px solid #093592;
 }
 
 .book-info-wrapper:hover{
