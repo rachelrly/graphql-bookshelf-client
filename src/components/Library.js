@@ -14,7 +14,7 @@ function Library() {
 
   const books = gql`
   query GetBooks {
-    books{
+    books${filter}{
       id,
       title,
       genre,
@@ -22,7 +22,6 @@ function Library() {
       author{
         firstName, 
         lastName,
-       
       }
     }
   }

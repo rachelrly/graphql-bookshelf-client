@@ -1,24 +1,34 @@
-import React, { useEffect, useContext } from 'react'
-import { BookContext } from '../contexts/bookContext';
+import React, { useEffect, useContext, Fragment } from 'react';
+import { useStarsForRating } from '../hooks/useStarsForRating';
+import SubNavItem from './SubNavItem';
 
 function SubNav(props) {
+
+  const rating = [
+    { id: 5, content: useStarsForRating(5) },
+    { id: 4, content: useStarsForRating(4) },
+    { id: 3, content: useStarsForRating(3) },
+    { id: 2, content: useStarsForRating(2) },
+    { id: 1, content: useStarsForRating(1) }
+  ];
+
+  const ratingJsx = rating.map((r, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='rating' key={index} queryString={`(rating: ${r.id})`} content={r.content} />)
+  const genresJsx = props.genres.map((g, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='genre' key={index} queryString={`(genre: "${g.name}")`} content={g.name} />)
+  const authorsJsx = props.authors.map((a, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='author' key={index} queryString={`(authorId: ${a.id})`} content={<Fragment><span>{a.firstName}</span> <span>{a.lastName}</span></Fragment>} />)
+  const listJsx = props.subNav === 'author' ? authorsJsx : props.subNav === 'genre' ? genresJsx : ratingJsx;
+
 
   useEffect(() => {
     return () => props.setSubNav(null);
   }, [])
 
-  const arr = props.subNav === 'author' ? props.author : props.subNav === 'genre' ? props.genre : props.rating
 
   return (
     <ul className={`sub-nav-wrapper sub-nav-${props.subNav}`}>
-      {arr.map((a, index) =>
-      (<li className='sub-nav-item'
-        key={index}
-        tabIndex='0'
-        onClick={() => { }}
-        onKeyPress={e => e.key === 'Enter' ? null : null}><span>{a}</span></li>))}
+      {listJsx}
     </ul>
   )
 }
 
-export default SubNav
+export default SubNav;
+
