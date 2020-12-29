@@ -20,7 +20,7 @@ function Book(props) {
         author{
           firstName, 
           lastName,
-          books{
+          books(exclude: ${props.id}){
               id,
               title,
               genre,
