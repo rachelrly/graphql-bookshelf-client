@@ -3,11 +3,17 @@ import BookThumbnail from './BookThumbnail';
 
 function AuthorBook(props) {
 
+    const arr = props.author.books.length >= props.genre.books.length
+        ? { type: 'author', books: props.author.books }
+        : { type: 'genre', books: props.genre.books }
+
     return (
         <div className='author-books-wrapper'>
-            <h3>Also by {props.author.firstName} {props.author.lastName}</h3>
+            { arr.type === 'author'
+                ? <h3>Also by {props.author.firstName} {props.author.lastName}</h3>
+                : <h3>Also in {props.genre.name}</h3>}
             <div className='also-by-wrapper'>
-                {props.author.books ? props.author.books.slice(0, 3).map((b, index) => <BookThumbnail key={index} {...b} />) : null}
+                {arr.books.map((b, index) => <BookThumbnail key={index} {...b} />)}
             </div>
         </div>
 

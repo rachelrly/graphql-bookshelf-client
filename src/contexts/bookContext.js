@@ -29,7 +29,7 @@ export function BookContextProvider({ children }) {
   const getBooksFilteredByGenre = (genreId, exclude = null, limit = limitAmount, offset = null) => gql`
   query GetBooksFilteredByGenre {
   genre(id: ${genreId}){
-    books(exclude: ${exclude}, limit: ${limit}), offset: ${offset}){
+    books(exclude: ${exclude}, limit: ${limit}, offset: ${offset}){
       id,
       title,
       rating,
@@ -47,7 +47,7 @@ export function BookContextProvider({ children }) {
   const getBooksFilteredByAuthor = (authorId, exclude = null, limit = limitAmount, offset = null) => gql`
   query GetBooksFilteredByAuthor {
   author(id: ${authorId}){
-    books(exclude: ${exclude}, limit: ${limit}), offset: ${offset}){
+    books(exclude: ${exclude}, limit: ${limit}, offset: ${offset}){
       id,
       title,
       rating,
@@ -65,7 +65,7 @@ export function BookContextProvider({ children }) {
 
   const getBooksFilteredByRating = (rating, limit = limitAmount, offset = null) => gql`
 query GetBooksFilteredByRating {
-  books(rating: ${rating}, limit: ${limit}), offset: ${offset}){
+  books(rating: ${rating}, limit: ${limit}, offset: ${offset}){
       id,
       title,
       rating,
@@ -87,7 +87,7 @@ query GetBooksFilteredByRating {
       rating,
       genre{
         name, 
-        books(exclude: ${bookId}, limit: ${limit}), offset: ${offset}){
+        books(exclude: ${bookId}, limit: ${limit}, offset: ${offset}){
           id,
           title,
           genre{
@@ -103,7 +103,7 @@ query GetBooksFilteredByRating {
       author{
         firstName, 
         lastName,
-        books(exclude: ${bookId}, limit: ${limit}), offset: ${offset}){
+        books(exclude: ${bookId}, limit: ${limit}, offset: ${offset}){
             id,
             title,
             genre{

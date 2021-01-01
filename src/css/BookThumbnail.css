@@ -35,9 +35,11 @@ border-radius:  1px 8px 8px 1px;
 }
 
 .also-by-wrapper{
-    display: flex;
     width: inherit;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,150px);
+  grid-template-rows: repeat(2, 200px);
+  grid-gap: var(--spacer-sm);
 }
 
 .book-info-wrapper{
@@ -76,6 +78,7 @@ border-radius:  1px 8px 8px 1px;
 .author-books-wrapper h3{
 text-align: center;
 align-self: center;
+margin-bottom: var(--spacer-sm);
 }
 
 
@@ -94,6 +97,7 @@ align-self: center;
 .book-wrapper{
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-evenly;
 }
 
 .book-info-wrapper{
@@ -123,12 +127,6 @@ align-self: center;
     .also-by-wrapper{
         flex-direction: row;
         width: 100%;
-    }
-
-    .book-wrapper{
-        justify-content: space-between;
-        width: inherit;
-        justify-content: flex-start;
     }
 }
 

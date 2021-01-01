@@ -7,37 +7,10 @@ import BookContent from './BookContent';
 import Loading from './Loading';
 
 function Book(props) {
-  const { setPage } = useContext(BookContext);
+  const { setPage, getBookById } = useContext(BookContext);
 
-  const b = gql`
-    query GetBook {
-      book(id:${props.id}){
-        id,
-        title,
-        rating,
-        genre,
-        published,
-        author{
-          firstName, 
-          lastName,
-          books(exclude: ${props.id}){
-              id,
-              title,
-              genre,
-              author{
-                  firstName,
-                  lastName
-              }
-          }
-         
-        }
-      }
-    }
-  `
+  const { data, loading } = useQuery(getBookById(props.id))
 
-  const { data, loading } = useQuery(b)
-  //if author books.length > 3
-  //
   return (
     <Fragment>
       <div className='back-button-wrapper'>
