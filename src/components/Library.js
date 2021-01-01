@@ -9,15 +9,23 @@ import Dropdown from './Dropdown';
 import Loading from './Loading';
 
 function Library() {
-  const { page, filter } = useContext(BookContext);
+  const { page, getBooks } = useContext(BookContext);
+
+  //this component should be a 
+  //that a list passes through from context
+  //click handlers adjust context
+  //context resets when component unmounts
 
 
   const books = gql`
   query GetBooks {
-    books${filter}{
+    books{
       id,
       title,
-      genre,
+      genre{
+        id, 
+        name
+      },
       rating,
       author{
         firstName, 
@@ -26,7 +34,7 @@ function Library() {
     }
   }
 `
-  const { data, loading } = useQuery(books)
+  const { data, loading } = useQuery(getBooks())
 
 
 

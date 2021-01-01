@@ -39,6 +39,7 @@ nav{
   right: calc(var(--button-width) + var(--spacer-tiny));
   z-index: 7;
   top: calc(var(--button-height) + var(--spacer-tiny));
+  
 }
 
 .sub-nav-author{

@@ -1,0 +1,74 @@
+{
+  "workbench.colorCustomizations": {
+    "focusBorder": "#568c14",
+    "descriptionForeground": "#e5bddf",
+    "icon.foreground": "#e5bddf",
+    "sash.hoverBorder": "#e5bddf",
+
+    "textBlockQuote.foreground": "#deedc3",
+
+    "button.background":"#141a8c",
+    "button.foreground": "#f3e5f5",
+    "button.hoverBackground": "#4a148c",
+
+    "checkbox.background": "#f3e5f5",
+    "checkbox.foreground": "#141a8c",
+
+    "input.background": "#4a148c",
+    "input.foreground":"#f3e5f5",
+    "input.activeBorder": "#568c14",
+    "input.placeholderForeground": "#d491cb",
+
+    "scrollbar.shadow": "#d491cb",
+    "scrollbarSlider.hoverBackground": "#6a1b9a",
+    "scrollbarSlider.activeBackground": "#6a1b9a",
+
+    "badge.foreground": "#568c14",
+
+    "activityBar.background": "#4a148c",
+    "activityBar.foreground": "#deedc3",
+    "activityBar.dropBorder": "#deedc3",
+    "activityBar.inactiveForeground": "#f3e5f5",
+    "activityBarBadge.background": "#568c14",
+    "activityBarBadge.foreground": "#f3e5f5",
+    "activityBar.activeFocusBorder": "#568c14",
+    "activityBar.activeBorder": "#568c14",
+
+    "sideBar.background": "#6a1b9a",
+    "sideBarTitle.foreground": "#deedc3",
+    "sideBarSectionHeader.foreground": "#f3e5f5",
+    "sideBar.foreground": "#e5bddf",
+
+    "editorGroup.dropBackground": "#6a1b9a",
+    "editorGroupHeader.tabsBackground": "#f3e5f5",
+    "editorGroupHeader.tabsBorder": "#e5bddf",
+    "editorGroup.emptyBackground": "#f3e5f5",
+    "tab.activeBackground": "#4a148c",
+    "tab.activeForeground": "#deedc3",
+    "tab.inactiveBackground": "#f3e5f5",
+    "tab.inactiveForeground": "#141a8c",
+    "tab.hoverBackground": "#6a1b9a",
+    "tab.hoverForeground": "#deedc3",
+
+    "editorLineNumber.foreground": "#f3e5f5",
+    "editorLineNumber.activeForeground": "#deedc3",
+    "editorCursor.foreground": "#d491cb",
+    "editor.background": "#4a148c",
+    "editor.foreground": "#fff",
+    "editor.selectionHighlightBackground": "#6a1b9a",
+  
+    "statusBar.foreground": "#141a8c",
+    "statusBar.background": "#f3e5f5",
+
+    "list.activeSelectionBackground": "#141a8c",
+    "list.activeSelectionForeground": "#f3e5f5",
+    "list.hoverForeground": "#d491cb",
+    "list.hoverBackground": "#6a1b9a",
+   "editorBracketMatch.border": "#568c14",
+
+    
+    
+  },
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.colorTheme": "Visual Studio Dark"
+}

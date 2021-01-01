@@ -3,19 +3,16 @@ import { BookContext } from '../contexts/bookContext';
 
 
 function SubNavItem(props) {
-  const { filter, setFilter } = useContext(BookContext)
+  const cool = useContext(BookContext)
 
-  const handleSetFilter = () => {
-    if (filter !== props.queryString) {
-      setFilter(props.queryString)
-    }
-    props.setShowNav();
+  const handleSetQuery = () => {
+    return;
   }
   return (
     <li className='sub-nav-item'
       tabIndex='0'
-      onClick={() => handleSetFilter()}
-      onKeyPress={e => e.key === 'Enter' ? handleSetFilter() : null}><span>{props.content}</span></li>
+      onClick={() => handleSetQuery()}
+      onKeyPress={e => e.key === 'Enter' ? handleSetQuery() : null}><span>{props.content}</span></li>
   )
 }
 

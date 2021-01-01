@@ -6,7 +6,6 @@
     height: 200px;
     padding: var(--spacer-sm);
     justify-content: space-between;
-    margin: var(--spacer-sm);
     cursor: pointer;
     outline: 0;
     border-radius:  1px 8px 8px 1px;

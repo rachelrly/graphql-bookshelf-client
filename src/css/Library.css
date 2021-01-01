@@ -8,7 +8,11 @@
 }
 
 .library-wrapper{
-  align-items: flex-start;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,150px);
+  grid-template-rows: repeat(2, 200px);
+  grid-gap: var(--spacer-sm);
 }
 
 .back-button-wrapper{

@@ -5,9 +5,9 @@ import { BookContext } from '../contexts/bookContext';
 
 function BookThumbnail(props) {
     const { setPage } = useContext(BookContext);
-
+    console.log('GENRE NAME', props.genre)
     return (
-        <div className={`book-thumb-wrapper ${props.genre}`}
+        <div className={props.genre ? `book-thumb-wrapper ${props.genre.name}` : 'book-thumb-wrapper'}
             onClick={() => setPage(props.id)}
             onKeyPress={e => e.key === 'Enter' ? setPage(props.id) : null}
             tabIndex='0'>
