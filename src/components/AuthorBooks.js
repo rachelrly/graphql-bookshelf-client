@@ -3,7 +3,7 @@ import BookThumbnail from './BookThumbnail';
 
 function AuthorBook(props) {
 
-    const arr = props.author.books.length >= props.genre.books.length
+    const arr = props.author.books.length >= 2
         ? { type: 'author', books: props.author.books }
         : { type: 'genre', books: props.genre.books }
 

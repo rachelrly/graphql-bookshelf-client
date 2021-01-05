@@ -5,7 +5,6 @@ import { BookContext } from '../contexts/bookContext';
 
 function BookThumbnail(props) {
     const { setPage } = useContext(BookContext);
-    console.log('GENRE NAME', props.genre)
     return (
         <div className={props.genre ? `book-thumb-wrapper ${props.genre.name}` : 'book-thumb-wrapper'}
             onClick={() => setPage(props.id)}

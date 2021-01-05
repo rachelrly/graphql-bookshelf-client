@@ -75,7 +75,7 @@ button, .button{
   color:var(--colors-accent);
   background-color: var(--colors-accent-dark);
   border: var(--border-width) solid var(--colors-accent-dark);
-  margin-bottom: var(--spacer-tiny);
+  margin-bottom: var(--spacer-med);
   border-radius: 2px;
   font-family: inherit;
   font-size: inherit;

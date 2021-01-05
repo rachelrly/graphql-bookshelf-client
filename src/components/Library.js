@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useContext } from 'react'
+import React, { Fragment, useState, useContext, useEffect } from 'react'
 import { useQuery, gql } from '@apollo/client';
 import BookThumbnail from './BookThumbnail';
 import Book from './Book';
@@ -9,32 +9,16 @@ import Dropdown from './Dropdown';
 import Loading from './Loading';
 
 function Library() {
-  const { page, getBooks } = useContext(BookContext);
-
-  //this component should be a 
-  //that a list passes through from context
-  //click handlers adjust context
-  //context resets when component unmounts
+  const [books, setBooks] = useState([])
+  const { page, booksQuery, filterType } = useContext(BookContext);
+  const { data, loading } = useQuery(booksQuery);
 
 
-  const books = gql`
-  query GetBooks {
-    books{
-      id,
-      title,
-      genre{
-        id, 
-        name
-      },
-      rating,
-      author{
-        firstName, 
-        lastName,
-      }
+  useEffect(() => {
+    if (data) {
+      setBooks(!filterType ? data.books : filterType === 'genre' ? data.genre.books : data.author.books)
     }
-  }
-`
-  const { data, loading } = useQuery(getBooks())
+  }, [data, filterType])
 
 
 
@@ -46,7 +30,7 @@ function Library() {
           ? <Fragment>
             <Dropdown />
             <div className='library-wrapper wrapper'>
-              {data ? data.books.map(d => <BookThumbnail key={d.id} {...d} />) : null}
+              {books ? books.map(d => <BookThumbnail key={d.id} {...d} />) : null}
             </div>
           </Fragment>
           : <Book id={page} />}

@@ -12,9 +12,9 @@ function SubNav(props) {
     { id: 1, content: useStarsForRating(1) }
   ];
 
-  const ratingJsx = rating.map((r, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='rating' key={index} queryString={`(rating: ${r.id})`} content={r.content} />)
-  const genresJsx = props.genres.map((g, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='genre' key={index} queryString={`(genre: "${g.name}")`} content={g.name} />)
-  const authorsJsx = props.authors.map((a, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='author' key={index} queryString={`(authorId: ${a.id})`} content={<Fragment><span>{a.firstName}</span> <span>{a.lastName}</span></Fragment>} />)
+  const ratingJsx = rating.map((r, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='rating' key={index} id={r.id} content={r.content} />)
+  const genresJsx = props.genres.map((g, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='genre' key={index} id={g.id} content={g.name} />)
+  const authorsJsx = props.authors.map((a, index) => <SubNavItem setShowNav={() => props.setShowNav()} type='author' key={index} id={a.id} content={<Fragment><span>{a.firstName}</span> <span>{a.lastName}</span></Fragment>} />)
   const listJsx = props.subNav === 'author' ? authorsJsx : props.subNav === 'genre' ? genresJsx : ratingJsx;
 
 

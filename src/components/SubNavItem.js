@@ -3,10 +3,27 @@ import { BookContext } from '../contexts/bookContext';
 
 
 function SubNavItem(props) {
-  const cool = useContext(BookContext)
+  const {
+    getBooksFilteredByRating,
+    getBooksFilteredByGenre,
+    getBooksFilteredByAuthor,
+    setBooksQuery,
+    setFilterType } = useContext(BookContext)
 
+  // const query = props.type === 'rating' ? setBooksFilteredByRating 
   const handleSetQuery = () => {
-    return;
+    let books;
+    if (props.type === 'rating') {
+      setBooksQuery(getBooksFilteredByRating(props.id));
+    }
+    else if (props.type === 'genre') {
+      setFilterType('genre')
+      setBooksQuery(getBooksFilteredByGenre(props.id))
+    }
+    else {
+      setFilterType('author')
+      setBooksQuery(getBooksFilteredByAuthor(props.id))
+    }
   }
   return (
     <li className='sub-nav-item'

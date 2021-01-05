@@ -1,32 +1,21 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, useContext } from 'react';
 import SubNav from './SubNav';
 import { TiArrowSortedDown } from 'react-icons/ti';
 import '../css/nav.css';
 import { useQuery, gql } from '@apollo/client';
+import { BookContext } from '../contexts/bookContext';
 
 function Dropdown() {
   const [showNav, setShowNav] = useState(false);
   const [subNav, setSubNav] = useState(null);
 
+  const { getAuthorsandGenres } = useContext(BookContext);
+
   if (!showNav && subNav) {
     setSubNav(null);
   }
 
-  const a = gql`
-  query GetAuthors {
-    authors{
-      id,
-      firstName, 
-      lastName
-    },
-    genres{
-      id,
-      name
-    }
-  }
-`
-  const { data } = useQuery(a);
-
+  const { data } = useQuery(getAuthorsandGenres());
 
   return (
     <nav>
