@@ -5,7 +5,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { BookContextProvider } from './contexts/bookContext';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'https://rachels-graphql-bookshelf.herokuapp.com/graphql',
   cache: new InMemoryCache()
 });
 
