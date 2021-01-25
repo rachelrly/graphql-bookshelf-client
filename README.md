@@ -3,7 +3,7 @@
 GraphQL Bookshelf displays data about books from a GraphQL [API](https://github.com/Rachanastasia/graphql-bookshelf-api).
 This project was made to expolore working with GraphQL in a full-stack project.
 
-This is the repository for the client, using React and Apollo.
+This is the repository for the client, using React and Apollo Client.
 
 View the repository for the Express/GraphQL API [here](https://github.com/Rachanastasia/graphql-bookshelf-api).
 
@@ -16,8 +16,6 @@ View the live app [here](https://bookshelf-orcin.vercel.app/).
 - Apollo Client
 - CSS3
 - Deployed with Vercel
-
-## Images
 
 ## Images
 
